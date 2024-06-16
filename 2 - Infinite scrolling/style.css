@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Jost, sans-serif;
+  background-color: #f3f3f3;
+  margin: 0 1.5rem;
+
+  display: grid;
+  justify-content: center;
+}
+
+.heading-1 {
+  font-size: 3.6rem;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 3rem 0 1.5rem;
+}
+
+.images {
+  max-width: 100rem;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
