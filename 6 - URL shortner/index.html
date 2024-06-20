@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>URL Shortner</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <h1 class="heading-1">Quick URL Shortner</h1>
+    <p class="tagline">Shrink your links in a blink!</p>
+
+    <div hidden class="loader"></div>
+
+    <form class="form" action="#">
+      <input
+        type="url"
+        placeholder="Your URL"
+        name="url"
+        id="input-url"
+        class="input-url"
+      />
+      <button class="btn-submit" type="submit">
+        <i class="bi bi-arrow-right icon-submit"></i>
+      </button>
+    </form>
+
+    <div class="shorten-url hidden">
+      <textarea rows="1" cols="30" readonly class="textarea-url"></textarea>
+      <i title="Copy link" class="bi bi-clipboard"></i>
+      <i title="Copied" class="bi bi-clipboard-fill hidden"></i>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #1d1128;
+  color: #e5d4ed;
+  font-size: 1.8rem;
+  padding: 0 1.5rem 0 3rem;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 1rem;
+
+  height: 95vh;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+::selection {
+  background-color: #44285f;
+}
+
+.bi {
+  color: #f3f3f3;
+}
+
+.heading-1 {
+  font-size: 5.6rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.tagline {
+  opacity: 0.7;
+  margin-bottom: 3rem;
+}
+
+form {
+  max-width: 55rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  position: relative;
+}
+
+.input-url {
+  width: 80%;
+  padding: 1.5rem 2.5rem;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  font-size: 1.8rem;
+  font-family: inherit;
+
+  transition: transform 0.3s;
+}
+
+.input-url:focus {
+  transform: translateY(-5px);
+}
+
+.btn-submit {
+  outline: no;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.textarea-url {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #f3f3f3;
+  resize: none;
+
+  text-align: center;
+  font-size: inherit;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.icon-submit {
+  font-size: 3rem;
+  transition: transform 0.3s;
+}
+
+.icon-submit:hover {
+  transform: translateX(10px);
+}
+
+.shorten-url {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.shorten-url .bi {
+  cursor: pointer;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.loader {
+  margin-top: 1rem;
+  width: 5rem;
+  height: 5rem;
+  border: 3px solid #f3f3f3;
+  border-radius: 100%;
+  border-top-color: #44285f;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 40.625em) {
+  html {
+    font-size: 43.75%;
+  }
+}
