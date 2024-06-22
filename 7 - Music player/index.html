@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script async src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1eb7adce62.js"
+      crossorigin="anonymous"
+      async
+    ></script>
+  </head>
+  <body>
+    <div class="song">
+      <div class="song__img">
+        <img src="" alt="thumbnail" class="img" />
+      </div>
+      <h1 class="song__title">Awake in the Deep</h1>
+      <h2 class="song__artist">Aldenous Ichnite</h2>
+
+      <audio src="" class="audio" hidden controls></audio>
+
+      <div class="song__duration">
+        <span class="song__start">0:00</span>
+        <span class="song__end">0:00</span>
+      </div>
+
+      <div class="song__progress-container">
+        <div class="song__progress"></div>
+      </div>
+
+      <div class="song__controls">
+        <i class="icon fa-solid fa-backward"></i>
+        <i class="icon icon-lg fa-solid fa-pause hidden"></i>
+        <i class="icon icon-lg fa-solid fa-play"></i>
+        <i class="icon fa-solid fa-forward"></i>
+      </div>
+    </div>
+  </body>
+</html>
