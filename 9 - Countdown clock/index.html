@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Clock</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <video class="video" autoplay loop>
+      <source src="sky.mp4" />
+    </video>
+    <div class="overlay"></div>
+
+    <div class="container">
+      <div class="countdown-create">
+        <h1 class="heading-1">Create a Countdown in seconds !</h1>
+        <form class="form">
+          <label for="countdown-title">What do you want for ?</label>
+          <input
+            type="text"
+            id="countdown-title"
+            placeholder="Countdown Title"
+            required
+          />
+          <label for="countdown-date">Select a date</label>
+          <input required type="date" id="countdown-date" />
+          <button type="submit" class="btn btn-countdown-create">Create</button>
+        </form>
+      </div>
+
+      <div class="countdown hidden">
+        <h1 class="heading-1">Your countdown status</h1>
+        <ul class="countdown-time">
+          <li>
+            <div class="days">&nbsp;0</div>
+            days
+          </li>
+          <li>
+            <div class="hours">&nbsp;0</div>
+            hours
+          </li>
+          <li>
+            <div class="mins">&nbsp;0</div>
+            mins
+          </li>
+          <li>
+            <div class="secs">&nbsp;0</div>
+            secs
+          </li>
+        </ul>
+        <button class="btn btn-countdown-reset">Reset</button>
+      </div>
+
+      <div class="countdown-complete hidden">
+        <h1 class="heading-1">Your Countdown Completed</h1>
+        <ul class="countdown-time">
+          <li>
+            <div class="days">0</div>
+            days
+          </li>
+          <li>
+            <div class="hours">0</div>
+            hours
+          </li>
+          <li>
+            <div class="mins">0</div>
+            mins
+          </li>
+          <li>
+            <div class="secs">0</div>
+            secs
+          </li>
+        </ul>
+        <button class="btn btn-countdown-complete">Create New Countdown</button>
+      </div>
+    </div>
+  </body>
+</html>
