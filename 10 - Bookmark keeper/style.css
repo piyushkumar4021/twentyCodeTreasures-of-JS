@@ -1,0 +1,214 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+  --color-primary: #845ef7;
+  --border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-primary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='96' viewBox='0 0 60 96'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='M36 10a6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-12 0 6 6 0 0 0-6-6 6 6 0 0 1-6-6V10a6 6 0 1 1 12 0 6 6 0 0 0 12 0zm24 78a6 6 0 0 1-6-6 6 6 0 0 0-6-6 6 6 0 0 1-6-6V58a6 6 0 1 1 12 0 6 6 0 0 0 6 6v24zM0 88V64a6 6 0 0 0 6-6 6 6 0 0 1 12 0v12a6 6 0 0 1-6 6 6 6 0 0 0-6 6 6 6 0 0 1-6 6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+  padding: 3rem 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  height: 100vh;
+}
+
+.btn {
+  display: block;
+  padding: 1rem 3rem;
+  font-size: 2.6rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+
+.btn-bookmark {
+  background: rgba(0, 0, 0, 0.6);
+  color: #f3f3f3;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.btn-bookmark:hover {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1rem 3rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.bookmarks {
+  max-width: 110rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.bookmark {
+  background-color: rgba(255, 255, 255, 0.3);
+
+  position: relative;
+
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: box-shadow 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+.bookmark:hover {
+  box-shadow: 0 1rem 3rem 1rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+}
+
+.delete-bookmark {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  transform: scale(1.3);
+
+  font-size: 1.6rem;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.bookmark:hover .delete-bookmark {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+
+.bookmark__favicon {
+  border-radius: 100%;
+  width: 2.5rem;
+  transition: transform 0.3s;
+}
+
+.bookmark__url {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  text-decoration: none;
+  color: #333;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
+
+.heading-1 {
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: #845ef7;
+  filter: brightness(70%);
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.modal {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  animation: show 0.4s linear;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.show-modal {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+
+.form {
+  max-width: 70rem;
+  width: 90%;
+  background-color: #f3f3f38a;
+  padding: 3rem;
+  border-radius: var(--border-radius);
+
+  position: relative;
+
+  display: grid;
+}
+
+.close-modal {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  transform: scale(2.5);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+label {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+input {
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  outline: 2px solid var(--color-primary);
+}
+
+.btn-submit {
+  justify-self: center;
+  margin-top: 1rem;
+  background-color: var(--color-primary);
+  color: #f3f3f3;
+  font-weight: 500;
+
+  transition: filter 0.3s;
+}
+
+.btn-submit:hover {
+  filter: brightness(90%);
+}
