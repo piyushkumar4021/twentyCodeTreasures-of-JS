@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="player">
+      <video src="video.mp4" preload="auto" class="video"></video>
+
+      <div class="show-controls">
+        <div class="controls">
+          <div class="progress__range" title="seek">
+            <div class="progress__bar"></div>
+          </div>
+          <div class="controls__left">
+            <div class="play-pause">
+              <i class="icon bi bi-play-fill" title="play"></i>
+              <i class="icon bi bi-pause-fill hidden" title="pause"></i>
+            </div>
+            <div class="mute-unmute">
+              <i class="icon bi bi-volume-up-fill" title="mute"></i>
+              <i class="icon bi bi-volume-mute-fill hidden" title="unmute"></i>
+            </div>
+            <div class="volume__range" title="volume">
+              <div class="volume__bar"></div>
+            </div>
+          </div>
+
+          <div class="controls__right">
+            <select class="speed" title="playback speed">
+              <option value="0.5">0.5x</option>
+              <option value="0.75">0.75x</option>
+              <option value="1" selected>1x</option>
+              <option value="1.5">1.5x</option>
+              <option value="2">2x</option>
+            </select>
+            <div class="time">
+              <span class="current">0:00</span>
+              <span>/</span>
+              <span class="duration">0:06</span>
+            </div>
+            <div class="fullscreen">
+              <i class="icon bi bi-arrows-fullscreen" title="fullscreen"></i>
+              <i
+                class="icon bi bi-fullscreen-exit hidden"
+                title="fullscreen-exit"
+              >
+              </i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
