@@ -50,7 +50,12 @@ btnPlay.addEventListener("click", () => {
 });
 
 videoEl.addEventListener("click", () => {
+  togglePlayPause();
   videoEl.paused ? videoEl.play() : videoEl.pause();
+});
+
+videoEl.addEventListener("ended", () => {
+  togglePlayPause();
 });
 
 progressRange.addEventListener("click", (e) => {
