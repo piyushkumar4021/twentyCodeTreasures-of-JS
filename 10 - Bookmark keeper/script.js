@@ -31,6 +31,11 @@ modal.addEventListener(
   (e) => e.target.classList.contains("modal") && toggleModal()
 );
 
+const validateUrl = (url) =>
+  ["http://", "https://"].some((str) => url.includes(str))
+    ? url
+    : "https://" + url;
+
 // Adding a Bookmark
 const addBookmark = function (bookmark) {
   const { name, url, id } = bookmark;
@@ -41,7 +46,7 @@ const addBookmark = function (bookmark) {
       <div class="bookmark" data-id="${id}">
         <i class="bi bi-x delete-bookmark"></i>
         
-        <a class="bookmark__url" href="https://${url}" target="_blank">
+        <a class="bookmark__url" href="${validateUrl(url)}" target="_blank">
         <img
           src="http://www.google.com/s2/favicons?domain=${url}"
           alt="Bookmark Favicon"
