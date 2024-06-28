@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"
+    ></script>
+    <script defer src="script.js"></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="h1">Rock Paper Scissors Lizard Spock</h1>
+      </div>
+      <div class="game-area">
+        <div class="player">
+          <div class="player__details">
+            You - <span class="player__score">0</span>
+            <span class="player__choice hidden">--- Rock</span>
+          </div>
+          <div class="player__choices">
+            <i
+              class="icon far fa-hand-rock"
+              title="Rock"
+              id="playerRock"
+              data-name="rock"
+            ></i>
+            <i
+              class="icon far fa-hand-paper"
+              title="Paper"
+              id="playerPaper"
+              data-name="paper"
+            ></i>
+            <i
+              class="icon far fa-hand-scissors"
+              title="Scissors"
+              id="playerScissors"
+              data-name="scissor"
+            ></i>
+            <i
+              class="icon far fa-hand-lizard"
+              title="Lizard"
+              id="playerLizard"
+              data-name="lizard"
+            ></i>
+            <i
+              class="icon far fa-hand-spock"
+              title="Spock"
+              id="playerSpock"
+              data-name="spock"
+            ></i>
+          </div>
+        </div>
+
+        <div class="computer">
+          <div class="computer__details">
+            Computer - <span class="computer__score">0</span>
+            <span class="computer__choice hidden">--- Rock</span>
+          </div>
+          <!-- prettier-ignore -->
+          <div class="computer__choices"><i
+              class="icon far fa-hand-rock"
+              title="Rock"
+              id="computerRock"
+              data-name="rock"
+            ></i
+            ><i
+              class="icon far fa-hand-paper"
+              title="Paper"
+              id="computerPaper"
+              data-name="paper"
+            ></i
+            ><i
+              class="icon far fa-hand-scissors"
+              title="Scissors"
+              id="computerScissors"
+              data-name="scissor"
+            ></i
+            ><i
+              class="icon far fa-hand-lizard"
+              title="Lizard"
+              id="computerLizard"
+              data-name="lizard"
+            ></i
+            ><i
+              class="icon far fa-hand-spock"
+              title="Spock"
+              id="computerSpock"
+              data-name="spock"
+            ></i></div>
+        </div>
+
+        <button class="btn btn-reset">
+          <i class="icon fas fa-sync-alt"></i>
+        </button>
+
+        <div class="message">Play a Game</div>
+      </div>
+    </div>
+  </body>
+</html>
