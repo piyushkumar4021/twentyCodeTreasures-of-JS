@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Sprint Game</title>
+
+    <link
+      rel="icon"
+      href="https://www.google.com/s2/favicons?domain=https://github.com/"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <h1 class="h1">Math Sprint Game</h1>
+      <div class="countdown" hidden>GO!</div>
+
+      <div class="start">
+        <div class="selections">
+          <div class="selection" data-value="10">
+            <div class="selection__title">10 Questions</div>
+            <div class="score-container">
+              Best Score
+              <div class="score">0.0s</div>
+            </div>
+          </div>
+
+          <div class="selection" data-value="25">
+            <div class="selection__title">25 Questions</div>
+            <div class="score-container">
+              Best Score
+              <div class="score">0.0s</div>
+            </div>
+          </div>
+
+          <div class="selection" data-value="50">
+            <div class="selection__title">50 Questions</div>
+            <div class="score-container">
+              Best Score
+              <div class="score">0.0s</div>
+            </div>
+          </div>
+
+          <div class="selection" data-value="99">
+            <div class="selection__title">99 Questions</div>
+            <div class="score-container">
+              Best Score
+              <div class="score">0.0s</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-full btn-start">Start</button>
+      </div>
+
+      <div class="play" hidden>
+        <div class="questions"></div>
+        <div class="btns">
+          <div class="btn btn-wrong" data-value="false">Wrong</div>
+          <div class="btn btn-right" data-value="true">Right</div>
+        </div>
+      </div>
+
+      <div class="result" hidden>
+        <h2 class="h2">Your Time</h2>
+        <div class="total-time">4.8s</div>
+        <div class="base-time">Base Time: 3.0s</div>
+        <div class="penalty-time">Penalty: +1.8s</div>
+
+        <button class="btn btn-full btn-play-again">Play Again</button>
+      </div>
+    </div>
+  </body>
+</html>

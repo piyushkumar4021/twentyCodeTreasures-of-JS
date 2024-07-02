@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&wght=400;500&display=swap");
+
+:root {
+  --color-primary: #1c7ed6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #212529;
+  color: #f3f3f3;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 1.5rem;
+}
+
+.app {
+  background-color: #495057;
+  width: 100%;
+  max-width: 55rem;
+  min-height: 55rem;
+  padding: 2.5rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.475);
+}
+
+.h1 {
+  font-size: 4.8rem;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  text-shadow: 0 0.5rem rgba(0, 0, 0, 0.475);
+}
+
+.h2 {
+  color: #212529;
+  font-size: 3.6rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.countdown {
+  font-size: 6.2rem;
+  text-align: center;
+  padding: 12rem 0 14rem;
+  animation: zoom 1s linear infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.selections {
+  margin-bottom: 4rem;
+}
+
+.selection {
+  border: 1px solid #868e96;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.selection-selected {
+  background-color: #2b2f33;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.175);
+}
+
+.selection:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.selection:hover {
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.375);
+}
+
+.selection__title {
+  font-size: 2.8rem;
+}
+
+.score-container {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.score {
+  letter-spacing: 3px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.btn {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  font-size: 2.4rem;
+  border-radius: 10px;
+  text-align: center;
+
+  transition: background-color 0.2s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: #343a40;
+  color: #f3f3f3;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.375);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-wrong {
+  background: #f03e3e;
+  flex: 1;
+}
+
+.btn-right {
+  background: #37b24d;
+  flex: 1;
+}
+
+.play {
+  position: relative;
+}
+
+.questions {
+  height: 18rem;
+  overflow-y: hidden;
+  margin-bottom: 2rem;
+  font-size: 3.8rem;
+  text-align: center;
+  padding: 11rem 0 0;
+  margin-bottom: 17rem;
+  background-color: #495057;
+}
+
+.questions::-webkit-scrollbar {
+  display: none;
+}
+
+.play::after {
+  content: "";
+  display: block;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  height: 6.7rem;
+
+  position: absolute;
+  top: 11rem;
+  pointer-events: none;
+}
+
+.question {
+  padding: 1rem;
+}
+
+.result {
+  text-align: center;
+  height: 100%;
+}
+
+.total-time {
+  color: #37b24d;
+  font-size: 5.6rem;
+  margin-bottom: 7rem;
+  letter-spacing: 2px;
+}
+
+.base-time {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.penalty-time {
+  font-size: 2.4rem;
+  color: #f03e3e;
+  margin-bottom: 9rem;
+}
+
+@media (max-width: 40.625em) {
+  html {
+    font-size: 50%;
+  }
+}
