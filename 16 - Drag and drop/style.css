@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+:root {
+  --color-0: #f03e3e;
+  --color-1: #1c7ed6;
+  --color-2: #37b24d;
+  --color-3: #f59f00;
+  --color-text: #f3f3f3;
+  --border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--color-text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  padding: 1.5rem 3rem;
+
+  background: url(bg.svg);
+  background-attachment: fixed;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+textarea {
+  font-family: inherit;
+}
+
+.container {
+  max-width: 130rem;
+  width: 100%;
+}
+
+.h1 {
+  font-size: 3.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+.h2 {
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+}
+
+.head-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.head-item {
+  max-width: 31rem;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.main-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.main-item {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  display: inline-block;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.7rem 1.5rem;
+  transition: background 0.3s;
+}
+
+.btn-save {
+  margin-left: auto;
+}
+
+.backlog-tab .btn:hover,
+.bg-0 {
+  background: var(--color-0);
+}
+
+.progress-tab .btn:hover,
+.bg-1 {
+  background: var(--color-1);
+}
+
+.completed-tab .btn:hover,
+.bg-2 {
+  background: var(--color-2);
+}
+
+.hold-tab .btn:hover,
+.bg-3 {
+  background: var(--color-3);
+}
+
+.textarea {
+  font-size: 1.6rem;
+  width: 100%;
+  border-radius: var(--border-radius);
+  outline: none;
+  padding: 1rem;
+  color: #111;
+  background: #f1f3f5;
+  margin-top: 1.5rem;
+}
+
+.backlog-tab .textarea {
+  box-shadow: 0 0 0 0.5rem var(--color-0);
+}
+
+.progress-tab .textarea {
+  box-shadow: 0 0 0 0.5rem var(--color-1);
+}
+
+.completed-tab .textarea {
+  box-shadow: 0 0 0 0.5rem var(--color-2);
+}
+
+.hold-tab .textarea {
+  box-shadow: 0 0 0 0.5rem var(--color-3);
+}

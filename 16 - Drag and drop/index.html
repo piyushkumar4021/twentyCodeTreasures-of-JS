@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and drop</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon//apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon//favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon//favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon//site.webmanifest" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="h1">Drag and drop</h1>
+
+      <ul class="head-items">
+        <!-- Backlog -->
+        <li class="head-item backlog-tab" data-tab="0">
+          <h2 class="h2 bg-0">Backlog</h2>
+
+          <ul class="main-items backlog-items"></ul>
+
+          <div class="btns">
+            <button class="btn btn-add">+ Add item</button>
+            <button class="btn btn-save" hidden>Save item</button>
+          </div>
+          <div class="textarea" contenteditable="true" hidden></div>
+        </li>
+
+        <!-- In progress -->
+        <li class="head-item progress-tab" data-tab="1">
+          <h2 class="h2 bg-1">In Progress</h2>
+
+          <ul class="main-items progress-items"></ul>
+
+          <div class="btns">
+            <button class="btn btn-add">+ Add item</button>
+            <button class="btn btn-save" hidden>Save item</button>
+          </div>
+          <div class="textarea" contenteditable="true" hidden></div>
+        </li>
+
+        <!-- Completed -->
+        <li class="head-item completed-tab" data-tab="2">
+          <h2 class="h2 bg-2">Completed</h2>
+
+          <ul class="main-items completed-items"></ul>
+
+          <div class="btns">
+            <button class="btn btn-add">+ Add item</button>
+            <button class="btn btn-save" hidden>Save item</button>
+          </div>
+          <div class="textarea" contenteditable="true" hidden></div>
+        </li>
+
+        <!-- Onhold -->
+        <li class="head-item hold-tab" data-tab="3">
+          <h2 class="h2 bg-3">On Hold</h2>
+
+          <ul class="main-items hold-items"></ul>
+
+          <div class="btns">
+            <button class="btn btn-add">+ Add item</button>
+            <button class="btn btn-save" hidden>Save item</button>
+          </div>
+          <div class="textarea" contenteditable="true" hidden></div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
