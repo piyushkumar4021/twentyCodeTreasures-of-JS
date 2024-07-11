@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Paint</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <!-- Color Picker -->
+    <script src="jscolor.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="not-supported">Please open this site in another browser</div>
+
+    <div class="toolbar">
+      <div class="box selected-tool">Brush</div>
+
+      <div class="tools">
+        <i class="brush bi bi-brush-fill active" title="brush"></i>
+        <input
+          type="text"
+          class="color-picker brush-color-picker"
+          data-jscolor="{preset: 'dark large'}"
+          value="#000000"
+          title="brush color"
+        />
+
+        <div class="box brush-size" title="current size">10</div>
+        <input
+          type="range"
+          min="1"
+          max="50"
+          value="10"
+          class="brush-slider"
+          id="brush-slider"
+          title="drag to change size"
+        />
+
+        <input
+          type="text"
+          class="color-picker background-color-picker"
+          data-jscolor="{preset: 'dark large'}"
+          title="background color"
+        />
+
+        <i class="eraser bi bi-eraser-fill" title="eraser"></i>
+        <i class="clear bi bi-arrow-counterclockwise" title="clear canvas"></i>
+
+        <i class="save-local bi bi-cloud-arrow-down-fill" title="save"></i>
+        <i class="load-local bi bi-cloud-arrow-up-fill" title="load"></i>
+        <i class="clear-local bi bi-trash3-fill" title="clear saved canvas"></i>
+      </div>
+
+      <a class="save-canvas" download="canvas">
+        <i class="save bi bi-floppy-fill" title="download"></i>
+      </a>
+    </div>
+
+    <canvas id="canvas"></canvas>
+  </body>
+</html>
