@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <video src="bg.mp4" class="bg" autoplay></video>
+
+    <div class="calculator">
+      <div class="calculator__display">
+        <div class="display">0</div>
+        <div class="result">&nbsp;</div>
+      </div>
+
+      <div class="calculator__btns">
+        <div class="btn btn-operator" data-value="+">+</div>
+        <div class="btn btn-operator" data-value="-">-</div>
+        <div class="btn btn-operator" data-value="*">×</div>
+        <div class="btn btn-operator" data-value="/">÷</div>
+        <div class="btn" data-value="7">7</div>
+        <div class="btn" data-value="8">8</div>
+        <div class="btn" data-value="9">9</div>
+        <div class="btn" data-value="4">4</div>
+        <div class="btn" data-value="5">5</div>
+        <div class="btn" data-value="6">6</div>
+        <div class="btn" data-value="1">1</div>
+        <div class="btn" data-value="2">2</div>
+        <div class="btn" data-value="3">3</div>
+        <div class="btn" data-value="0">0</div>
+        <div class="btn btn-decimal" data-value=".">.</div>
+        <div class="btn btn-clear" data-value="C">C</div>
+        <div class="btn btn-equal" data-value="=">=</div>
+      </div>
+    </div>
+  </body>
+</html>
